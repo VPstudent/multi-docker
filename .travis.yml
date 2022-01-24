@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:  
-  - docker build -t vpstudent/react-test -f /root/complex/client/Dockerfile.dev ./client
+  - docker build -t vpstudent/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run vpstudent/react-test npm test -- --coverage
